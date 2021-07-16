@@ -4,11 +4,12 @@ const parser = require('cron-parser');
 const axios = require('axios')
 require('dotenv').config()
 
-// Travis API Token
+// Travis API Token & REPO SLUG
 TRAVIS_AUTH_TOKEN = process.env.TRAVIS_API_TOKEN
+REPO_SLUG = process.env.REPO_SLUG
 
 // CRON TIME EXPRESSION( Minutes, Hour, Day of Month, Month, Day of week)
-const cronExpression = "04 22 * * 5";
+const cronExpression = "34 22 * * 5";
 const interval = parser.parseExpression(cronExpression);
 
 // TRAVIS API REQUEST
@@ -29,7 +30,7 @@ console.log('Next run:', interval.next().toString());
 
 // Schedule the CRON job
 cron.schedule(cronExpression, function () {
-    axios.post('https://api.travis-ci.com/repo/qasimabdullah404%2Ftravis-cron_jobs_timings-test/requests', payload)
+    axios.post(`https://api.travis-ci.com/repo/${REPO_SLUG}/requests`, payload)
     console.log('Cron Job Started')
     console.log('Next run:', interval.next().toString());
 }, {

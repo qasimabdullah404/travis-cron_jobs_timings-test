@@ -1,3 +1,4 @@
+
 # Travis CI Custom CRON Jobs Setup
 
 Set desired CRON Job intervals for your Travis CI Builds. Script needs to be in running state always to keep CRON tasks running.
@@ -9,7 +10,7 @@ Set desired CRON Job intervals for your Travis CI Builds. Script needs to be in 
 1- Download the repository
 2- Run npm install
 3- Change start script timezone to yours
-4- Rename .example.env to .env and paste in your Travis API Token
+4- Rename .example.env to .env, Paste in your Travis API Token and your active github repository on Travis slug in format <owner>%2F<repo>
 5- Change cronExpression in index.js to desired
 6- Change timezone in cron.schedule in index.js to desired
 7- Run npm start
