@@ -1,0 +1,24 @@
+{
+  "name": "travis-cron_jobs_timings-test",
+  "version": "1.0.0",
+  "description": "Travis CI cron jobs custom time intervals setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qasimabdullah404/travis-cron_jobs_timings-test.git"
+  },
+  "author": "Qasim Abdullah <qasimabdullah404@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qasimabdullah404/travis-cron_jobs_timings-test/issues"
+  },
+  "homepage": "https://github.com/qasimabdullah404/travis-cron_jobs_timings-test#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "node-cron": "^3.0.0"
+  }
+}
