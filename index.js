@@ -5,7 +5,7 @@ const axios = require('axios')
 require('dotenv').config()
 
 // Travis API Token
-TRAVIS_AUTH_TOKEN = process.env.TRAVIS_AUTH_TOKEN
+TRAVIS_AUTH_TOKEN = process.env.TRAVIS_API_TOKEN
 
 // CRON TIME EXPRESSION( Minutes, Hour, Day of Month, Month, Day of week)
 const cronExpression = "04 22 * * 5";
