@@ -18,4 +18,5 @@ const payload = {
 
 cron.schedule("* * * * *", function () {
     axios.post('https://api.travis-ci.com/repo/qasimabdullah404%2Ftravis-cron_jobs_timings-test/requests', payload)
+    console.log('Cron Job Started')
 })
