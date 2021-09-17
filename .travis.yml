@@ -1,5 +1,6 @@
 os: linux
-dist: focal
+dist: xenial
+virt: lxd
 language: generic
 
 script:
