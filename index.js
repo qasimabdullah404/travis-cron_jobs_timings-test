@@ -9,7 +9,7 @@ TRAVIS_AUTH_TOKEN = process.env.TRAVIS_API_TOKEN
 REPO_SLUG = process.env.REPO_SLUG
 
 // CRON TIME EXPRESSION( Minutes, Hour, Day of Month, Month, Day of week)
-const cronExpression = "34 22 * * 5";
+const cronExpression = "57 23 * * 5";
 const interval = parser.parseExpression(cronExpression);
 
 // TRAVIS API REQUEST
@@ -21,7 +21,7 @@ axios.defaults.headers.post['Accept'] = 'application/json'
 const payload = {
     "request": {
         "branch": "main",
-        "message": "This is an api request"
+        "message": "CRON job triggered from an API request."
     }
 }
 
